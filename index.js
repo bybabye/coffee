@@ -4,7 +4,7 @@ const axios = require('axios');
 const cheerio = require('cheerio');
 const bodyParser = require('body-parser');
 const dotenv = require('dotenv');
-const request = require('request-promise');
+
 
 const url = 'https://thecoffeevn.com/menu-order/';
 
