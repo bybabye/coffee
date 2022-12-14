@@ -61,10 +61,11 @@ const filter = (name,id)  => {
 }
 app.get('/v1',(req,resp) => {
     const thumbnails = [];
+    const limit = Number(req.query.limit);
     try {
        axios(url).then((res) => {
         const html = res.data;
-      
+        
         const $$ = cheerio.load(html);
        
         
@@ -84,6 +85,8 @@ app.get('/v1',(req,resp) => {
         }else{
             resp.status(200).json(thumbnails);
         }
+            
+        
          
        })
     } catch (error) {
